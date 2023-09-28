@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+# This script displays the hour for 12 and 59 minutes
+
+hour=0
+min=60
+
+while ((hour != 14)); do
+	if [ $min -eq 60 ]
+	then
+		case $hour in
+			0)
+				echo "Hour: $hour"
+				;;
+			1)
+				echo "Hour: $hour"
+				;;
+			2)
+				echo "Hour: $hour"
+				;;
+			3)
+				echo "Hour: $hour"
+				;;
+			4)
+				echo "Hour: $hour"
+				;;
+			5)
+				echo "Hour: $hour"
+				;;
+			6)
+				echo "Hour: $hour"
+				;;
+			7)
+				echo "Hour: $hour"
+				;;
+			8)
+				echo "Hour: $hour"
+				;;
+			9)
+				echo "Hour: $hour"
+				;;
+			10)
+				echo "Hour: $hour"
+				;;
+			11)
+				echo "Hour: $hour"
+				;;
+			12)
+				echo "Hour: $hour"
+				;;
+		esac
+		((hour++))
+		((min=1))
+	fi
+	if [ $hour -ne 14 ]
+	then
+		echo "$min"
+		((min++))
+	fi
+done

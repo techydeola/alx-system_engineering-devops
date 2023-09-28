@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script displays the content of the
+# current directory in a list format
+
+LIST="$(ls)"
+for i in "${LIST[@]}"; do
+	splitWord="$(echo "$i" | cut -d'-' -f2)"
+	echo "$splitWord"
+done

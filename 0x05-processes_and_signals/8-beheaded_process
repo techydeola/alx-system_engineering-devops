@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script stops "7-higlander" process
+
+pkill -9 bash

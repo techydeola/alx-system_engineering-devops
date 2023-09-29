@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script stops "4-to_infinity_and_beyond" process
+
+pid=$( (pgrep bash) )
+second_pid=$(echo "$pid" | awk 'NR==2')
+kill "$second_pid"

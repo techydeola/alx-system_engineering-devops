@@ -1,0 +1,8 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.2	localhost
+8.8.8.8		facebook.com

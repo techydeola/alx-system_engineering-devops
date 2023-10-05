@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
 # This script configures an Ubuntu server with some requirements
+
+cp hosts.new /etc/hosts

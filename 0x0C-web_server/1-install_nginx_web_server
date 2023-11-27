@@ -3,11 +3,12 @@
 
 sudo apt-get update
 sudo apt-get install nginx -y
+sudo apt-get install nginx-extras -y
 sudo ufw allow 'Nginx HTTP'
 
 nginx_conf="/etc/nginx/sites-available/default"
 
-cat <<EOL > "$nginx_conf"
+sudo cat <<EOL > "$nginx_conf"
 server {
   listen 80;
   server_name localhost;
@@ -18,4 +19,4 @@ server {
 }
 EOL
 
-systemctl restart nginx
+sudo systemctl restart nginx

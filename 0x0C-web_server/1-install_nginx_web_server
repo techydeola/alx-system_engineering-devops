@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# This script installs a nginx server
+
+sudo apt-get update
+sudo apt-get install nginx -y
+sudo ufw allow 'Nginx HTTP'
+
+nginx_conf="/etc/nginx/sites-available/default"
+
+cat <<EOL > "$nginx_conf"
+server {
+  listen 80;
+  server_name localhost;
+
+  location / {
+    echo "Hello World!";
+  }
+}
+EOL
+
+systemctl restart nginx

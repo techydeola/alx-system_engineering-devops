@@ -5,18 +5,5 @@ sudo apt-get update
 sudo apt-get install nginx -y
 sudo apt-get install nginx-extras -y
 sudo ufw allow 'Nginx HTTP'
-
-nginx_conf="/etc/nginx/sites-available/default"
-
-sudo cat <<EOL > "$nginx_conf"
-server {
-  listen 80;
-  server_name localhost;
-
-  location / {
-    echo "Hello World!";
-  }
-}
-EOL
-
+echo "Hello World" | sudo tee /var/www/html/index
 sudo systemctl restart nginx

@@ -18,7 +18,7 @@ if __name__ == ('__main__'):
                              f"{employee_id}/todos")
     todo_data = todo_resp.json()
 
-    with open('USER_ID.csv', 'w') as file:
+    with open(f'{employee_id}.csv', 'w') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for data in todo_data:
             my_list = [data['userId'], name, data['completed'], data['title']]

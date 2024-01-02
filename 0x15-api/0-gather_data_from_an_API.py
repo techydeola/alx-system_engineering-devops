@@ -30,4 +30,4 @@ if __name__ == ('__main__'):
     for task in todo_data:
         if task['completed'] is True:
             title = task['title']
-            print(f"\t{title}")
+            print(f"\t {title}")

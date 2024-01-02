@@ -19,10 +19,7 @@ if __name__ == ('__main__'):
     todo_data = todo_resp.json()
 
     with open('USER_ID.csv', 'w') as file:
-        writer = csv.writer(file, quoting=csv.QUOTE_MINIMAL)
+        writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for data in todo_data:
-            my_list = [str(data['userId']),
-                       str(name),
-                       str(data['completed']),
-                       str(data['title'])]
+            my_list = [data['userId'], name, data['completed'], data['title']]
             writer.writerow(my_list)

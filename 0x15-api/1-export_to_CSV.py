@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This is a module that consumes an API """
+""" This is a module that consumes an API and export to csv """
 
 
 if __name__ == ('__main__'):

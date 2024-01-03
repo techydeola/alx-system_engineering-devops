@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" This is a module that consumes an API """
+"""
+    This is a module that takes a specific employee data from an API
+    to json
+"""
 
 
 if __name__ == ('__main__'):

@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name localhost 3.84.225.217;
+
+    add_header  X-Served-By 375-web-01;
+
+    location ~ ^/airbnb-dynamic/number_odd_or_even/(\d+)$ {
+        proxy_pass http://localhost:5001/$1;
+	proxy_set_header Host $host;
+	proxy_set_header X-Real-IP $remote_addr;
+	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
